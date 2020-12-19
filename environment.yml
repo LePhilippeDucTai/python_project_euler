@@ -10,6 +10,8 @@ dependencies:
   - ca-certificates=2020.12.8=hecd8cb5_0
   - certifi=2020.12.5=py38hecd8cb5_0
   - click=7.1.2=py_0
+  - gmp=6.1.2=hb37e062_1
+  - gmpy2=2.0.8=py38h6ef4df4_3
   - iniconfig=1.1.1=py_0
   - intel-openmp=2019.4=233
   - isort=5.6.4=py_0
@@ -26,6 +28,9 @@ dependencies:
   - mkl_fft=1.2.0=py38hc64f4ea_0
   - mkl_random=1.1.1=py38h959d312_0
   - more-itertools=8.6.0=pyhd3eb1b0_0
+  - mpc=1.1.0=h6ef4df4_1
+  - mpfr=4.0.2=h9066e36_1
+  - mpmath=1.1.0=py38_0
   - mypy_extensions=0.4.3=py38_0
   - ncurses=6.2=h0a44026_1
   - numba=0.51.2=py38h6440ff4_1
@@ -36,6 +41,7 @@ dependencies:
   - pathspec=0.7.0=py_0
   - pip=20.3.3=py38hecd8cb5_0
   - pluggy=0.13.1=py38_0
+  - psutil=5.7.2=py38haf1e3a3_0
   - py=1.10.0=pyhd3eb1b0_0
   - pylint=2.6.0=py38_0
   - pyparsing=2.4.7=py_0
@@ -46,6 +52,7 @@ dependencies:
   - setuptools=51.0.0=py38hecd8cb5_2
   - six=1.15.0=py38hecd8cb5_0
   - sqlite=3.33.0=hffcf06c_0
+  - sympy=1.7.1=py38hecd8cb5_0
   - tk=8.6.10=hb0a8c7a_0
   - toml=0.10.1=py_0
   - typed-ast=1.4.1=py38h1de35cc_0
