@@ -3,3 +3,4 @@ __pycache__/*
 problems/__pycache__/*
 tests/__pycache__/*
 *.pyc
+test.ipynb

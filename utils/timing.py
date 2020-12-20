@@ -32,24 +32,29 @@ def get_process_memory():
     return mi.rss
 
 
-def time_it(func):
-    def wrapper(*args, **kwargs):
-        print(f"\n### Entering in {func.__name__}. ###")
-        t1 = time.perf_counter()
-        rss_before = get_process_memory()
-        s = func(*args, **kwargs)
-        elapsed_time = elapsed_since(t1)
-        rss_after = get_process_memory()
-        print(f"### Quitting function {func.__name__}. ###\n")
-        print(
-            "Profiling: {:>8}  RSS: {:>8} | time: {:>8}".format(
-                "<" + func.__name__ + ">",
-                format_bytes(rss_after - rss_before),
-                elapsed_time,
+def time_it(debug=False):
+    def real_decorator(func):
+        def wrapper(*args, **kwargs):
+            print(f"\n### Entering in {func.__name__}. ###")
+            t1 = time.perf_counter()
+            rss_before = get_process_memory()
+            s = func(*args, **kwargs)
+            if debug:
+                print(s)
+            elapsed_time = elapsed_since(t1)
+            rss_after = get_process_memory()
+            print(f"### Quitting function {func.__name__}. ###\n")
+            print(
+                "Profiling: {:>8}  RSS: {:>8} | time: {:>8}".format(
+                    "<" + func.__name__ + ">",
+                    format_bytes(rss_after - rss_before),
+                    elapsed_time,
+                )
             )
-        )
-        print("\n")
-        return s
+            print("\n")
+            return s
 
-    return wrapper
+        return wrapper
+
+    return real_decorator
 

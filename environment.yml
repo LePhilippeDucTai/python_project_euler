@@ -9,6 +9,7 @@ dependencies:
   - black
   - psutil
   - sympy
+  - ipykernel
 prefix: /Users/philippe_le/opt/anaconda3/envs/dev
 
 # To save the environment file :
