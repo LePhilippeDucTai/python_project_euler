@@ -10,3 +10,6 @@ dependencies:
   - psutil
   - sympy
 prefix: /Users/philippe_le/opt/anaconda3/envs/dev
+
+# To save the environment file :
+# conda env export --from-history > environment.yml
