@@ -1,6 +1,7 @@
 from problems import Problem009
+import pytest
 
 
-def test_problem009():
-    assert Problem009.isPythagorean((3, 4, 5)) == True
-    assert Problem009.isPythagorean((5, 6, 7)) == False
+@pytest.mark.parametrize("input, expected", [((3, 4, 5), True), ((5, 6, 7), False)])
+def test_problem009(input, expected):
+    assert Problem009.isPythagorean(input) == expected
